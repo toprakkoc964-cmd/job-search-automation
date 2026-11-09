@@ -20,7 +20,13 @@ Edit the search configuration for your target roles and locations, then run:
 .venv/bin/python scripts/collect_jobs.py --limit 2
 ```
 
-The collector rotates through the configured searches and writes leads and a run report under `job-search/data/`. Review errors separately from empty results. The examples use the UK to demonstrate the configuration. Set `country_indeed` to the JobSpy country identifier for your own search.
+The collector rotates through the configured searches and writes leads and a run report under `job-search/data/`. Review errors separately from empty results. The sample covers the UK, Germany, Canada, and the US. Replace those examples with your own target markets.
+
+## Search across countries
+
+Each query has a unique `id`, a role `term`, a `location`, and a `country_indeed` value from the [JobSpy country list](https://github.com/speedyapply/JobSpy#indeed-and-glassdoor). Add `"is_remote": true` to look for remote listings in that market. Existing configs can omit this field.
+
+For broader discovery, Codex can also research public employer career pages, regional boards, and international remote boards. Those sources are searched separately from the Indeed collector. Confirm eligible hiring countries, time zones, contract type, and any work authorization or sponsorship requirements on the original listing. A remote listing in one market may accept applicants only from that market.
 
 ## Start a Codex chat
 

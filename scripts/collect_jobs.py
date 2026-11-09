@@ -34,6 +34,7 @@ def worker(query, output):
     from jobspy import scrape_jobs
     jobs = scrape_jobs(site_name=['indeed'], search_term=query['term'],
                        location=query['location'], country_indeed=query['country_indeed'],
+                       is_remote=query.get('is_remote', False),
                        results_wanted=10, hours_old=168, verbose=1)
     result = {'jobs': json.loads(jobs.to_json(orient='records', date_format='iso')),
               'errors': jobs.attrs.get('errors', {}),

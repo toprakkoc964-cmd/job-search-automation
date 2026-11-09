@@ -1,4 +1,6 @@
 [
-  {"id": "junior-frontend", "term": "junior frontend developer", "location": "United Kingdom", "country_indeed": "UK"},
-  {"id": "software-qa", "term": "junior QA tester", "location": "United Kingdom", "country_indeed": "UK"}
+  {"id": "uk-frontend", "term": "junior frontend developer", "location": "United Kingdom", "country_indeed": "UK"},
+  {"id": "de-qa", "term": "Junior Softwaretester", "location": "Germany", "country_indeed": "Germany"},
+  {"id": "ca-mobile", "term": "junior mobile developer", "location": "Canada", "country_indeed": "Canada"},
+  {"id": "us-remote-support", "term": "application support analyst", "location": "United States", "country_indeed": "USA", "is_remote": true}
 ]
