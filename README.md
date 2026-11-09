@@ -49,6 +49,12 @@ A clone contains no candidate profile. Codex writes confirmed answers to the loc
 
 For recurring research, configure a scheduled task in your own Codex workspace. Give it this project's folder and ask it to follow `AGENTS.md`. This repo does not provision a scheduler, mailbox integration, or automatic submission workflow.
 
+## How subagents are selected
+
+When parallel delegation is available and authorized, Codex can assign two researchers. One covers the candidate's best-supported target roles. The other covers adjacent roles, freelance opportunities, or a different market, depending on the candidate's preferences. For example, a Flutter candidate could get one mobile researcher and one QA or application support researcher.
+
+The coordinator runs JobSpy once, assigns distinct scopes, and merges verified results into one report. If subagents are unavailable, the coordinator can research the same scopes sequentially. See [subagent instructions](AGENTS.md#subagent-selection).
+
 ## Privacy
 
 Keep candidate profiles, CVs, job records, generated output, and credentials in the ignored local paths. Review staged files before committing. A public repository makes committed content visible.

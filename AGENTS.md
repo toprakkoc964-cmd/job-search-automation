@@ -19,3 +19,14 @@ Accept partial answers. Never invent facts. Ask for follow-up only when it affec
 - Save reports, application tracking, and tailored materials under ignored local directories. Use only confirmed candidate facts. Keep application drafts and confirmed submissions distinct.
 - Default to zero upfront spending and draft-only preparation. No automated external submissions, outreach, inbox access, or scheduling is configured by this repository. Use a separately authorized account or workflow for those steps.
 - For a hiring referral, ask a company leader who handles the named role. Discuss eligibility and share the CV with the referred hiring contact when appropriate.
+
+## Subagent selection
+
+Use up to two parallel research subagents when delegation is authorized and available. The coordinator still owns the run and works sequentially when delegation is unavailable.
+
+1. **Primary-role researcher.** Assign the role family with the strongest overlap between the user's priorities and demonstrated experience. Focus on direct matches. For a mobile candidate, this could mean Flutter, iOS, and Android.
+2. **Adjacent-role researcher.** Assign an adjacent family the user is open to, based on transferable skills and the amount of preparation needed. Examples include QA, application support, or junior backend. If freelance is a higher priority, assign freelance discovery instead. If there is only one target family, split it by market or source group.
+
+Give each subagent a distinct scope, up to three public sources per pass, the target countries, work arrangement, experience level, and fee limit. Share only the candidate facts needed for matching. Ask for the employer, role, official URL, evidence the listing is open, hiring geography, key requirements, and any eligibility gaps. Separate direct matches, roles requiring preparation, and exploratory leads.
+
+The coordinator runs JobSpy once and shares relevant leads. Subagents return research to the coordinator and do not rerun the collector or edit shared tracking files. The coordinator merges duplicates, checks promising findings against employer sources, and updates the local report. Subagents do not send applications or messages.
