@@ -40,6 +40,10 @@ Open the cloned folder as a Codex project, start a chat, and enter **Set up my j
 
 A clone contains no candidate profile. Codex writes confirmed answers to the local, git-ignored `profile/candidate.md`. A new chat needs a first message to begin onboarding.
 
+## Try the offline demo
+
+Follow the [fictional candidate walkthrough](examples/demo.md) to see onboarding, a simulated collector run, a sample report, and an application draft. Run `python3 -m unittest discover -s tests -v` to check rotation, deduplication, cooldown, and source failures without a network connection.
+
 ## Workflow
 
 1. Collect leads from Indeed and research other public sources relevant to your targets.
@@ -47,7 +51,7 @@ A clone contains no candidate profile. Codex writes confirmed answers to the loc
 3. Prepare a role-specific CV, form answers, or a freelance proposal using confirmed experience.
 4. Record submissions and replies when you have evidence. A prepared package stays a draft.
 
-For recurring research, configure a scheduled task in your own Codex workspace. Give it this project's folder and ask it to follow `AGENTS.md`. This repo does not provision a scheduler, mailbox integration, or automatic submission workflow.
+Use the [report, tracker, and application templates](examples/templates.md) for local records. The [operations guide](docs/operations.md) covers source rotation, scheduled research, and Gmail reply tracking.
 
 ## How subagents are selected
 
