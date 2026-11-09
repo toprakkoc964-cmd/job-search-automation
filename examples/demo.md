@@ -4,7 +4,7 @@ All people, companies, listings, and evidence in this example are fictional. The
 
 ## First chat
 
-In Codex, enter **Set up my job search**. Example answers:
+In your agent tool, enter **Set up my job search**. Use the [portable prompt](../docs/start-prompt.md) if the tool does not load repository instructions. Example answers:
 
 - Target junior frontend roles, with QA as an adjacent option.
 - Based in the UK. Open to hybrid in Manchester or remote from the UK. No relocation.

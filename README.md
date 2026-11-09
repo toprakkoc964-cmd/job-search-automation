@@ -1,6 +1,6 @@
 # Job Search Automation
 
-A local starter for researching job openings, verifying them on employer sites, and preparing tailored applications. It includes a rotating Indeed lead collector powered by JobSpy and an English onboarding workflow for Codex.
+A local starter for researching job openings, verifying them on employer sites, and preparing tailored applications. It includes a rotating Indeed lead collector powered by JobSpy and an English onboarding workflow for agent tools.
 
 ## Quick start
 
@@ -28,9 +28,20 @@ Each query has a unique `id`, a role `term`, a `location`, and a `country_indeed
 
 For broader discovery, Codex can also research public employer career pages, regional boards, and international remote boards. Those sources are searched separately from the Indeed collector. Confirm eligible hiring countries, time zones, contract type, and any work authorization or sponsorship requirements on the original listing. A remote listing in one market may accept applicants only from that market.
 
-## Start a Codex chat
+## Start an agent chat
 
-Open the cloned folder as a Codex project, start a chat, and enter **Set up my job search**. Codex uses the project's `AGENTS.md` instructions to ask for:
+Open the cloned folder in your agent tool and enter **Set up my job search**.
+
+| Tool | How it loads the workflow |
+|---|---|
+| Codex and other tools that read `AGENTS.md` | Use the shared instructions directly. |
+| Claude Code | `CLAUDE.md` imports the shared instructions. |
+| Gemini CLI | `GEMINI.md` imports the shared instructions. |
+| Other tools or web chats | Use the [portable first-chat prompt](docs/start-prompt.md) and provide `AGENTS.md`. |
+
+The Python collector runs independently from the agent tool. File access, shell execution, web research, delegation, and scheduling depend on the host. A chat-only assistant can guide setup and produce drafts for you to save manually.
+
+The shared workflow asks for:
 
 - Target roles, seniority, and adjacent roles
 - Location, work arrangement, relocation preferences, and any relevant work authorization limits
@@ -38,7 +49,7 @@ Open the cloned folder as a Codex project, start a chat, and enter **Set up my j
 - Optional CV, public portfolio links, and application email
 - Freelance preferences, upfront application budget, and exclusions
 
-A clone contains no candidate profile. Codex writes confirmed answers to the local, git-ignored `profile/candidate.md`. A new chat needs a first message to begin onboarding.
+A clone contains no candidate profile. An assistant with local file access writes confirmed answers to the local, git-ignored `profile/candidate.md`. A new chat needs a first message to begin onboarding.
 
 ## Try the offline demo
 
@@ -55,7 +66,7 @@ Use the [report, tracker, and application templates](examples/templates.md) for 
 
 ## How subagents are selected
 
-When parallel delegation is available and authorized, Codex can assign two researchers. One covers the candidate's best-supported target roles. The other covers adjacent roles, freelance opportunities, or a different market, depending on the candidate's preferences. For example, a Flutter candidate could get one mobile researcher and one QA or application support researcher.
+When parallel delegation is available and authorized, the assistant can assign two researchers. One covers the candidate's best-supported target roles. The other covers adjacent roles, freelance opportunities, or a different market, depending on the candidate's preferences. For example, a Flutter candidate could get one mobile researcher and one QA or application support researcher.
 
 The coordinator runs JobSpy once, assigns distinct scopes, and merges verified results into one report. If subagents are unavailable, the coordinator can research the same scopes sequentially. See [subagent instructions](AGENTS.md#subagent-selection).
 

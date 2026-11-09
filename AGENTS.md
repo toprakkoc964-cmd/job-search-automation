@@ -10,7 +10,11 @@ When the user opens this project and asks to set up or start their job search, c
 4. Which public portfolio links and application email should we use? These are optional during setup.
 5. Should the search include freelance work? What upfront application budget and exclusions should we apply?
 
-Accept partial answers. Never invent facts. Ask for follow-up only when it affects the next action. Store the confirmed answers in the ignored local file `profile/candidate.md`. Keep credentials and unnecessary sensitive identifiers out of this project.
+Accept partial answers. Never invent facts. Ask for follow-up only when it affects the next action. Store the confirmed answers in the ignored local file `profile/candidate.md` when authorized file access is available. Otherwise, return a local-saveable profile draft. Keep credentials and unnecessary sensitive identifiers out of this project.
+
+## Host capabilities
+
+Use the host’s available tools. If shell execution is unavailable, provide the collector command for the user to run. If web research is unavailable, leave listing verification pending and ask for the official listing or its contents.
 
 ## Research and preparation
 
