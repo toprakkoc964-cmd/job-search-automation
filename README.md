@@ -77,3 +77,27 @@ Keep candidate profiles, CVs, job records, generated output, and credentials in 
 ## License
 
 MIT. The JobSpy dependency is distributed under its own license.
+
+## From job listings to portfolio projects
+
+The portfolio coach turns a skill gap from a target listing into a project you can build and publish. You get milestones, acceptance criteria, and a first task. You write the code and can ask the coach for hints or review. See the [coach workflow and fictional example](docs/portfolio-coach.md).
+
+### Agent data flow
+
+```mermaid
+flowchart TD
+    P["Local candidate profile and search targets"] --> C["Coordinator"]
+    J["JobSpy leads"] --> C
+    C --> A["Primary-role researcher: direct matches"]
+    C --> B["Adjacent-role researcher: transferable skills or freelance leads"]
+    A --> V["Coordinator: verify listings and merge duplicates"]
+    B --> V
+    V --> T["Local report and application drafts"]
+    V --> S["Portfolio coach: turn skill gaps into project briefs"]
+    U["Listing selected by the candidate"] --> S
+    S --> D["Local brief: milestones, acceptance criteria, first task"]
+    D --> W["Candidate builds the project"]
+    W --> R["Coach reviews the result and gives feedback"]
+```
+
+The coordinator can run each role sequentially if the agent tool does not support delegation. Candidate profiles, reports, application drafts, and personalized project briefs are stored in ignored local paths.

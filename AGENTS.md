@@ -34,3 +34,7 @@ Use up to two parallel research subagents when delegation is authorized and avai
 Give each subagent a distinct scope, up to three public sources per pass, the target countries, work arrangement, experience level, and fee limit. Share only the candidate facts needed for matching. Ask for the employer, role, official URL, evidence the listing is open, hiring geography, key requirements, and any eligibility gaps. Separate direct matches, roles requiring preparation, and exploratory leads.
 
 The coordinator runs JobSpy once and shares relevant leads. Subagents return research to the coordinator and do not rerun the collector or edit shared tracking files. The coordinator merges duplicates, checks promising findings against employer sources, and updates the local report. Subagents do not send applications or messages.
+
+## Portfolio project coaching
+
+When the candidate requests a project for a specific listing, or verified research reveals a useful skill gap for a priority role, follow [the portfolio coach workflow](docs/portfolio-coach.md). Assign coaching after research results are merged, or run it directly for a user-provided listing. Mark any unverified listing details as such. Keep the candidate's project progress separate from application status.
